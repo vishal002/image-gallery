@@ -5,9 +5,10 @@ import ImageGallery from './ImageGallery';
 
 export default function App() {
   return (
-    <div>
+    <div className="App">
       <h1>Lazy Loading Image Gallery</h1>
       <ImageGallery images={placeholders} />
     </div>
   );
 }
+
