@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# LazyLoad Image Gallery in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your task is to implement a component displaying a lazily loaded image gallery.
 
-## Available Scripts
+### Requirements
 
-In the project directory, you can run:
+1.  Your component should accept an `images` property, which is an array of
+    image URLs for the gallery.
+2.  Use the `img` element to display the images. Ensure that you also use `img`
+    for images that aren't loaded yet. (`img` with empty `src` attribute).
+3.  Arrange the images in a three-column grid with `200px` by `200px` cells.
+4.  Implement lazy loading so that an image in the gallery should be loaded once
+    the image is `100px` or less below the visible viewport (below the fold).
 
-### `npm start`
+### Assumptions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The `images` property always contains an array of working image URLs.
+- All images in the `images` property have dimensions of `200px` and `200px`
+  height.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Hints
 
-### `npm test`
+- `IntersectionObserver` might be useful
+- Do NOT use `React.lazy`; this task is about lazy loading images, not code
+  splitting.
+- Your solution will be evaluated based on its correctness; performance and
+  coding style will not be assessed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Available tools/packages
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React 17.0.2
+- JavaScript ES2020
